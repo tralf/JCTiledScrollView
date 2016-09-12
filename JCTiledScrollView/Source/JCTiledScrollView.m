@@ -289,8 +289,8 @@
 - (CGPoint)screenPositionForAnnotation:(id<JCAnnotation>)annotation
 {
   CGPoint position;
-  position.x = (annotation.contentPosition.x * self.zoomScale) - _scrollView.contentOffset.x;
-  position.y = (annotation.contentPosition.y * self.zoomScale) - _scrollView.contentOffset.y;
+  position.x = (annotation.annotationContentPosition.x * self.zoomScale) - _scrollView.contentOffset.x;
+  position.y = (annotation.annotationContentPosition.y * self.zoomScale) - _scrollView.contentOffset.y;
   return position;
 }
 
@@ -333,7 +333,7 @@
           [_canvasView addSubview:t.view];
 
           [CATransaction begin];
-          [CATransaction setValue:(id) kCFBooleanTrue forKey:kCATransactionDisableActions];
+          [CATransaction setValue:(__bridge id) kCFBooleanTrue forKey:kCATransactionDisableActions];
           CABasicAnimation *theAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
           theAnimation.duration = 0.3;
           theAnimation.repeatCount = 1;

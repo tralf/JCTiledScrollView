@@ -29,6 +29,6 @@
 
 @protocol JCAnnotation <NSObject>
 
-@property (nonatomic, assign) CGPoint contentPosition;
+@property (nonatomic, assign) CGPoint annotationContentPosition;
 
 @end

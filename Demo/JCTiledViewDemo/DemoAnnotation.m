@@ -9,5 +9,5 @@
 #import "DemoAnnotation.h"
 
 @implementation DemoAnnotation
-@synthesize contentPosition = _contentPosition;
+@synthesize annotationContentPosition = _annotationContentPosition;
 @end

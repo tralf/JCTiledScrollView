@@ -124,7 +124,7 @@
   for (int i = 0; i < 5; i++)
   {
     id<JCAnnotation> a = [[DemoAnnotation alloc] init];
-    a.contentPosition = CGPointMake((float)(rand() % (int)size.width), (float)(rand() % (int)size.height));
+    a.annotationContentPosition = CGPointMake((float)(rand() % (int)size.width), (float)(rand() % (int)size.height));
     [self.scrollView addAnnotation:a];
   }
 }
